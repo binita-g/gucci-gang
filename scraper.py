@@ -9,4 +9,4 @@ soup = BeautifulSoup(page.content, "html.parser")
 
 results = soup.find("div", "data-lyrics-container"=="true")
 
-print(results.prettify())
+print(results.text)

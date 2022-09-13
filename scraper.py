@@ -1,12 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Scrape lyrics from the lyrics container on Genius page
-URL = "https://genius.com/Lil-pump-gucci-gang-lyrics"
-page = requests.get(URL)
+# Iterate through list of URLs
+with open("songs_list.txt","r") as f:
+    for line in f:
+        # Scrape lyrics from the lyrics container on Genius page
+        page = requests.get(line.strip(), timeout=10)
 
-soup = BeautifulSoup(page.content, "html.parser")
+        soup = BeautifulSoup(page.content, "html.parser")
 
-results = soup.find("div", "data-lyrics-container"=="true")
-
-print(results.text)
+        results = soup.find_all(attrs={"data-lyrics-container": "true"})
+        for result in results:
+            print(result.text)

@@ -53,6 +53,8 @@ with open("dates.txt","r") as f:
                 total_string += artist_word + "-"
             for title_word in title_string_array:
                 total_string += title_word + "-"
+            
+            # Add lyrics to end of string
             total_string += "lyrics"
 
             if (len(total_string) > 10) and (total_string != "RE--ENTRY-lyrics"):

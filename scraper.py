@@ -33,10 +33,12 @@ brands_dict = {'gucci': 0,
 in_file = sys.argv[1]
 
 # Iterate through list of URLs
-with open(in_file, "r") as f:
+with open(in_file, 'r') as f:
     # Set output file to output folder with input file name + scraped (i.e. "scraped_output/scraped_songs_list_2015_summer.txt")
-    out_file = "scraped_output/scraped_" + sys.argv[1]
-    sys.stdout = open(out_file, 'w')
+    out_file = "scraped_output/scraped_" + (sys.argv[1]).split("songs_lists/",1)[1]
+    print(out_file)
+
+    sys.stdout = open(out_file, 'w+')
 
     # Set up frequency distribution.
     fdist = FreqDist()
@@ -84,7 +86,7 @@ with open(in_file, "r") as f:
             print('Could not get song', line.strip())
 
     # Print all frequency analyses in freqdist folder.
-    out_file = "freqdist_results/freqdist_" + sys.argv[1]
+    out_file = "freqdist_results/freqdist_" + (sys.argv[1]).split("songs_lists/",1)[1]
     sys.stdout = open(out_file, 'w')
     
     print(brands_dict)

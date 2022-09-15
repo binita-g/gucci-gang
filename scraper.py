@@ -29,8 +29,15 @@ brands_dict = {'gucci': 0,
                 'hermes': 0, 
                 'ysl': 0}
 
+# Take input .txt file from first argument (i.e. python3 scraper.py songs_list_2015_summer.txt)
+in_file = sys.argv[1]
+
 # Iterate through list of URLs
-with open("songs_list_generated.txt","r") as f:
+with open(in_file, "r") as f:
+    # Set output file to output folder with input file name + scraped (i.e. "scraped_output/scraped_songs_list_2015_summer.txt")
+    out_file = "scraped_output/scraped_" + sys.argv[1]
+    sys.stdout = open(out_file, 'w')
+
     # Set up frequency distribution.
     fdist = FreqDist()
     
@@ -76,8 +83,9 @@ with open("songs_list_generated.txt","r") as f:
         except:
             print('Could not get song', line.strip())
 
-    # Print the brands and the number of times they appear
+    # Print all frequency analyses in freqdist folder.
+    out_file = "freqdist_results/freqdist_" + sys.argv[1]
+    sys.stdout = open(out_file, 'w')
+    
     print(brands_dict)
-
-    # Print the frequency distribution
     print(repr(fdist))

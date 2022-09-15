@@ -13,12 +13,29 @@ wordnet_lemmatizer= WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
 # Words of interest
-brands_dict = {'gucci': 0, 'louis': 0, 'rolex': 0, 'ysl': 0}
+brands_dict = {'gucci': 0, 
+                'rolex': 0, 
+                'rollie': 0, 
+                'louis': 0, 
+                'dior': 0, 
+                'cartier': 0, 
+                'chanel': 0, 
+                'louboutin': 0, 
+                'prada': 0, 
+                'fendi': 0, 
+                'balenciaga': 0, 
+                'tiffany': 0, 
+                'versace': 0, 
+                'hermes': 0, 
+                'ysl': 0}
 
 # Iterate through list of URLs
 with open("songs_list_generated.txt","r") as f:
     # Set up frequency distribution.
     fdist = FreqDist()
+    
+    # Keep track of all the text in one string (do not print).
+    totalTextString = ""
     
     for line in f:
         # Scrape lyrics from the lyrics container on Genius page
@@ -50,7 +67,12 @@ with open("songs_list_generated.txt","r") as f:
                         textString += str(lemmatized).strip('[]')
                         textString += " "
                 
+                        # Update total text string
+                        totalTextString += textString
+                
+                # Print lyrics
                 print(textString)
+        # If the automatic lyric generator did not work, output which song it did not work for.
         except:
             print('Could not get song', line.strip())
 
@@ -59,6 +81,3 @@ with open("songs_list_generated.txt","r") as f:
 
     # Print the frequency distribution
     print(repr(fdist))
-
-    # Print all the text
-    # print(textString)

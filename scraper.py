@@ -59,6 +59,3 @@ with open("songs_list_generated.txt","r") as f:
 
     # Print the frequency distribution
     print(repr(fdist))
-
-    # Print all the text
-    # print(textString)

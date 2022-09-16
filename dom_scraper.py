@@ -17,6 +17,10 @@ regex = re.compile('.*o-chart-results-list__item.*')
 
 with open("dates.txt","r") as f:
     for date in f:
+        # Redirect stdout to songs_lists (i.e. "songs_lists/songs_list_2021-06-30.txt")
+        out_file = "songs_lists/songs_list_" + date + ".txt"
+        sys.stdout = open(out_file, 'w')
+
         url = "https://www.billboard.com/charts/hot-100/" + date.strip()
         page = requests.get(url, timeout=10)
 
@@ -53,6 +57,8 @@ with open("dates.txt","r") as f:
                 total_string += artist_word + "-"
             for title_word in title_string_array:
                 total_string += title_word + "-"
+            
+            # Add lyrics to end of string
             total_string += "lyrics"
 
             if (len(total_string) > 10) and (total_string != "RE--ENTRY-lyrics"):

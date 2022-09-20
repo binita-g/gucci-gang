@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Frequency Analysis
  
 Brands
@@ -71,6 +72,8 @@ fleece:0
 lace:4
 
 
+=======
+>>>>>>> main
 gucci: 
 ('strictly', 0.9769471287727356)
 
@@ -974,5 +977,10 @@ fendi:
 ('flo', 0.4439183473587036)
 
 
+<<<<<<< HEAD
 Similarity between gucci and louis:
 0.41616267
+=======
+Similarity between gucci and cartier:
+0.9685159
+>>>>>>> main

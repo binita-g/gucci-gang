@@ -104,23 +104,6 @@ sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
 
-# Find relationship between Beyonce and her brand sponsorships
-# w1 = 'beyonce'
-# w2 = 'adidas'
-# sim = model.wv.similarity(w1, w2)
-# print(f"Similarity between {w1} and {w2}:")
-# print(sim)
-
-# w2 = 'balenciaga'
-# sim = model.wv.similarity(w1, w2)
-# print(f"Similarity between {w1} and {w2}:")
-# print(sim)
-
-# w2 = 'cartier'
-# sim = model.wv.similarity(w1, w2)
-# print(f"Similarity between {w1} and {w2}:")
-# print(sim)
-
 # Find relationship between Drake and his brand sponsorships
 w1 = 'drake'
 w2 = 'nike'
@@ -138,26 +121,18 @@ sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
 
-# Find relationship between Migos and their brand sponsorships
-# w1 = 'migos'
-# w2 = 'louis'
-# sim = model.wv.similarity(w1, w2)
-# print(f"Similarity between {w1} and {w2}:")
-# print(sim)
+w1 = 'migos'
+w2 = 'louis'
+sim = model.wv.similarity(w1, w2)
+print(f"Similarity between {w1} and {w2}:")
+print(sim)
 
 w2 = 'prada'
 sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
 
-# w2 = 'valentino'
-# sim = model.wv.similarity(w1, w2)
-# print(f"Similarity between {w1} and {w2}:")
-# print(sim)
-
-# Find relationship between audience pick!!
-# w1 = 'beyonce'
-# w2 = 'louis'
-# sim = model.wv.similarity(w1, w2)
-# print(f"Similarity between {w1} and {w2}:")
-# print(sim)
+w2 = 'valentino'
+sim = model.wv.similarity(w1, w2)
+print(f"Similarity between {w1} and {w2}:")
+print(sim)

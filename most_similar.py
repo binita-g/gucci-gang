@@ -154,3 +154,10 @@ w2 = 'valentino'
 sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
+
+# Find relationship between audience pick!!
+w1 = 'beyonce'
+w2 = 'louis'
+sim = model.wv.similarity(w1, w2)
+print(f"Similarity between {w1} and {w2}:")
+print(sim)

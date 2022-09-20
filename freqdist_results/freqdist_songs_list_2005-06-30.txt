@@ -1,0 +1,2 @@
+{'gucci': 1, 'rolex': 0, 'rollie': 0, 'louis': 1, 'dior': 0, 'cartier': 0, 'chanel': 0, 'louboutin': 0, 'prada': 0, 'fendi': 0, 'balenciaga': 0, 'tiffany': 0, 'versace': 0, 'hermes': 0, 'ysl': 0}
+FreqDist({'i': 1633, 'and': 267, 'chorus': 222, 'girl': 208, 'like': 195, 'know': 186, 'go': 183, 'get': 178, 'verse': 167, 'oh': 158, ...})

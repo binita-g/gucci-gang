@@ -58,19 +58,19 @@ print("gucci: ")
 find_most_similar(*w_gucci)
 
 # Rolex
-w_rolex = [[u'rolex'], [u'rollie']]
-print("rolex: ")
-find_most_similar(*w_rolex)
+# w_rolex = [[u'rolex'], [u'rollie']]
+# print("rolex: ")
+# find_most_similar(*w_rolex)
 
 # Louis
-w_louis = [[u'louis'], [u'vuitton']]
-print("louis: ")
-find_most_similar(*w_louis)
+# w_louis = [[u'louis'], [u'vuitton']]
+# print("louis: ")
+# find_most_similar(*w_louis)
 
 # Dior
-w_dior = [[u'dior']]
-print("dior: ")
-find_most_similar(*w_dior)
+# w_dior = [[u'dior']]
+# print("dior: ")
+# find_most_similar(*w_dior)
 
 # Cartier
 w_cartier = [[u'cartier']]
@@ -78,19 +78,19 @@ print("cartier: ")
 find_most_similar(*w_cartier)
 
 # Chanel
-w_chanel = [[u'chanel']]
-print("chanel: ")
-find_most_similar(*w_chanel)
+# w_chanel = [[u'chanel']]
+# print("chanel: ")
+# find_most_similar(*w_chanel)
 
 # Louboutin
-w_louboutin = [[u'louboutin']]
-print("louboutin: ")
-find_most_similar(*w_louboutin)
+# w_louboutin = [[u'louboutin']]
+# print("louboutin: ")
+# find_most_similar(*w_louboutin)
 
 # Prada
-w_prada = [[u'prada']]
-print("prada: ")
-find_most_similar(*w_prada)
+# w_prada = [[u'prada']]
+# print("prada: ")
+# find_most_similar(*w_prada)
 
 # Fendi
 w_fendi = [[u'fendi']]
@@ -99,40 +99,40 @@ find_most_similar(*w_fendi)
 
 # Find similarity between TWO words
 w1 = 'gucci'
-w2 = 'louis'
+w2 = 'cartier'
 sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
 
 # Find relationship between Drake and his brand sponsorships
-w1 = 'drake'
-w2 = 'nike'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
+# w1 = 'drake'
+# w2 = 'nike'
+# sim = model.wv.similarity(w1, w2)
+# print(f"Similarity between {w1} and {w2}:")
+# print(sim)
 
-w2 = 'ovo'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
+# w2 = 'ovo'
+# sim = model.wv.similarity(w1, w2)
+# print(f"Similarity between {w1} and {w2}:")
+# print(sim)
 
-w2 = 'louis'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
+# w2 = 'louis'
+# sim = model.wv.similarity(w1, w2)
+# print(f"Similarity between {w1} and {w2}:")
+# print(sim)
 
-w1 = 'migos'
-w2 = 'louis'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
+# w1 = 'migos'
+# w2 = 'louis'
+# sim = model.wv.similarity(w1, w2)
+# print(f"Similarity between {w1} and {w2}:")
+# print(sim)
 
-w2 = 'prada'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
+# w2 = 'prada'
+# sim = model.wv.similarity(w1, w2)
+# print(f"Similarity between {w1} and {w2}:")
+# print(sim)
 
-w2 = 'valentino'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
+# w2 = 'valentino'
+# sim = model.wv.similarity(w1, w2)
+# print(f"Similarity between {w1} and {w2}:")
+# print(sim)

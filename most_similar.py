@@ -11,7 +11,7 @@ import logging
 import importlib
 from operator import itemgetter
 
-# To run, run "python3 most_similar.py output.txt.gz output_model.txt"
+# To run, run "python3 most_similar.py output.txt.gz"
 # Must be gzip file
 in_file = sys.argv[1]
 
@@ -104,23 +104,6 @@ sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
 
-# Find relationship between Beyonce and her brand sponsorships
-w1 = 'beyonce'
-w2 = 'adidas'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
-
-w2 = 'balenciaga'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
-
-w2 = 'cartier'
-sim = model.wv.similarity(w1, w2)
-print(f"Similarity between {w1} and {w2}:")
-print(sim)
-
 # Find relationship between Drake and his brand sponsorships
 w1 = 'drake'
 w2 = 'nike'
@@ -138,7 +121,6 @@ sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
 
-# Find relationship between Migos and their brand sponsorships
 w1 = 'migos'
 w2 = 'louis'
 sim = model.wv.similarity(w1, w2)

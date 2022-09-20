@@ -1,3 +1,79 @@
+<<<<<<< HEAD
+Frequency Analysis
+ 
+Brands
+gucci:4
+rolex:1
+rollie:0
+louis:1
+goyard:0
+saint laurent:0
+dolce:0
+celine:0
+canada goose:0
+moncler:0
+bottega:0
+burberry:0
+loewe:0
+dior:0
+cartier:1
+chanel:0
+louboutin:0
+prada:0
+fendi:1
+balenciaga:0
+tiffany:0
+versace:1
+hermes:0
+ysl:0
+
+Articles
+t-shirt:0
+shirt:6
+jeans:1
+sweater:4
+daisy dukes:0
+bikini:0
+black dress:0
+red dress:0
+dress:11
+shades:0
+sunglasses:0
+sneakers:0
+sneaks:0
+boots:1
+bag:18
+bags:0
+hat:20
+cap:14
+jacket:4
+cardigan:0
+suit:11
+tie:3
+pajamas:0
+trousers:0
+coat:5
+overalls:0
+skirt:3
+
+Textiles
+denim:0
+silk:5
+wool:0
+cotton:29
+velvet:6
+chiffon:0
+satin:2
+velour:0
+moleskin:0
+flannel:0
+corduroy:1
+fleece:0
+lace:4
+
+
+=======
+>>>>>>> main
 gucci: 
 ('strictly', 0.9769471287727356)
 
@@ -901,5 +977,10 @@ fendi:
 ('flo', 0.4439183473587036)
 
 
+<<<<<<< HEAD
+Similarity between gucci and louis:
+0.41616267
+=======
 Similarity between gucci and cartier:
 0.9685159
+>>>>>>> main

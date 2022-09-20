@@ -4,6 +4,8 @@ import requests
 import nltk
 import gensim
 from nltk.corpus import sentiwordnet as swn
+from nltk.corpus import gutenberg
+from nltk import FreqDist
 from gensim.models import Word2Vec
 import numpy as np
 import gzip
@@ -11,12 +13,14 @@ import logging
 import importlib
 from operator import itemgetter
 
+
 # To run, run "python3 most_similar.py output.txt.gz"
 # Must be gzip file
 in_file = sys.argv[1]
 
 # Set output file to output folder
 file_name = ((sys.argv[1]).split("scraped_output/",1)[1]).split(".gz",1)[0]
+file_name_with_folder = "scraped_output/" + file_name
 out_file = "vector_results/" + file_name + "_results"
 print(out_file)
 sys.stdout = open(out_file, 'w')
@@ -29,6 +33,105 @@ def read_input(input_file):
         for i, line in enumerate(f):
             # Preprocess the text.
             yield gensim.utils.simple_preprocess(line)
+
+# Frequency analysis
+def get_freq():
+    brands_dict = ['gucci', 
+                    'rolex', 
+                    'rollie',
+                    'louis',
+                    'goyard',
+                    'saint laurent',
+                    'dolce',
+                    'celine',
+                    'canada goose',
+                    'moncler',
+                    'bottega',
+                    'burberry',
+                    'loewe', 
+                    'dior', 
+                    'cartier', 
+                    'chanel', 
+                    'louboutin', 
+                    'prada', 
+                    'fendi', 
+                    'balenciaga', 
+                    'tiffany', 
+                    'versace', 
+                    'hermes', 
+                    'ysl']
+        
+    articles_dict = ['t-shirt',
+                    'shirt',
+                    'jeans',
+                    'sweater',
+                    'daisy dukes',
+                    'bikini',
+                    'black dress',
+                    'red dress',
+                    'dress',
+                    'shades',
+                    'sunglasses',
+                    'sneakers',
+                    'sneaks',
+                    'boots',
+                    'bag',
+                    'bags',
+                    'hat',
+                    'cap',
+                    'jacket',
+                    'cardigan',
+                    'suit',
+                    'tie',
+                    'pajamas',
+                    'trousers',
+                    'coat',
+                    'overalls',
+                    'skirt'
+    ]
+
+    textiles_dict = ['denim',
+                    'silk',
+                    'wool',
+                    'cotton',
+                    'velvet',
+                    'chiffon',
+                    'satin',
+                    'velour',
+                    'moleskin',
+                    'flannel',
+                    'corduroy',
+                    'fleece',
+                    'lace'
+    ]
+
+    print("Frequency Analysis")
+
+    with open (file_name_with_folder, "r") as text_file:
+        data = text_file.read().replace('\n', ' ')
+    
+    data = data.split(' ')
+    freqDist = FreqDist(data)
+
+    # Freq count for brands
+    print(" \nBrands")
+    for brand in brands_dict:
+        print_stmt = brand + ":" + str(freqDist[brand])
+        print(print_stmt)
+    
+    # Freq count for articles of clothing
+    print("\nArticles")
+    for article in articles_dict:
+        print_stmt = article + ":" + str(freqDist[article])
+        print(print_stmt)
+    
+    # Freq count for textiles
+    print("\nTextiles")
+    for textile in textiles_dict:
+        print_stmt = textile + ":" + str(freqDist[textile])
+        print(print_stmt)
+    
+    print('\n')
 
 # Find most similar words to another word.
 def find_most_similar(*w_group):
@@ -50,6 +153,9 @@ model = gensim.models.Word2Vec(
 
 model.train(documents, total_examples=len(documents), epochs=10)
 model.save('brand-vectors.w2v')
+
+# Frequency analysis
+get_freq()
 
 # Words Associations
 # Gucci

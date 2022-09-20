@@ -99,7 +99,7 @@ find_most_similar(*w_fendi)
 
 # Find similarity between TWO words
 w1 = 'gucci'
-w2 = 'cartier'
+w2 = 'louis'
 sim = model.wv.similarity(w1, w2)
 print(f"Similarity between {w1} and {w2}:")
 print(sim)
